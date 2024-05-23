@@ -1,4 +1,5 @@
 import 'package:assets_view/src/core/contants/constants_app.dart';
+import 'package:assets_view/src/pages/home/widget/buttom_menu.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -14,7 +15,37 @@ class HomePage extends StatelessWidget {
           width: 100,
         ),
       ),
-      body: Container(),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                ButtomMenu(
+                  label: 'Jaguar Unit',
+                  onPressed: () {},
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                ButtomMenu(
+                  label: 'Tobias Unit',
+                  onPressed: () {},
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                ButtomMenu(
+                  label: 'Apex Unit',
+                  onPressed: () {},
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

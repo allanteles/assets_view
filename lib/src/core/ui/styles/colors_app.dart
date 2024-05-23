@@ -4,6 +4,8 @@ class ColorsApp {
   static const Color primary = Color(0XFF2188FF);
   static const Color secondery = Color(0XFF17192D);
   static const Color background = Color(0XFFD0D7DE);
+  static const Color lightText = Color(0XFFFFFFFF);
+  static const Color darkText = Color(0XFF17192D);
 
   // static ColorsApp? _instance;
 
