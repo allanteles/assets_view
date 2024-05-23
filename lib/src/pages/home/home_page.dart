@@ -1,6 +1,8 @@
 import 'package:assets_view/src/core/contants/constants_app.dart';
+import 'package:assets_view/src/core/contants/routes_name.dart';
 import 'package:assets_view/src/pages/home/widget/buttom_menu.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -25,21 +27,27 @@ class HomePage extends StatelessWidget {
               children: [
                 ButtomMenu(
                   label: 'Jaguar Unit',
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.toNamed(RoutesName.assetPage);
+                  },
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 ButtomMenu(
                   label: 'Tobias Unit',
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.toNamed(RoutesName.assetPage);
+                  },
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 ButtomMenu(
                   label: 'Apex Unit',
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.toNamed(RoutesName.assetPage);
+                  },
                 ),
               ],
             ),

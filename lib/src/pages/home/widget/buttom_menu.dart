@@ -13,7 +13,20 @@ class ButtomMenu extends StatelessWidget {
       height: 76,
       child: ElevatedButton(
         onPressed: onPressed,
-        child: Text(label),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(Icons.spoke_outlined),
+            const SizedBox(width: 10),
+            Text(
+              label,
+              style: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
