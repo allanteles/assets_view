@@ -6,6 +6,7 @@ class ColorsApp {
   static const Color background = Color(0XFFD0D7DE);
   static const Color lightText = Color(0XFFFFFFFF);
   static const Color darkText = Color(0XFF17192D);
+  static const Color mediumText = Color(0XFF77818C);
 
   // static ColorsApp? _instance;
 

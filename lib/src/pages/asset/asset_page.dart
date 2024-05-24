@@ -1,5 +1,7 @@
-import 'package:assets_view/src/core/helpers/size_extension.dart';
+import 'package:assets_view/src/core/ui/styles/colors_app.dart';
+import 'package:assets_view/src/core/ui/styles/text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_simple_treeview/flutter_simple_treeview.dart';
 
 class AssetPage extends StatelessWidget {
   const AssetPage({super.key});
@@ -31,25 +33,72 @@ class AssetPage extends StatelessWidget {
                 Row(
                   children: [
                     ToggleButtons(
-                      isSelected: const [false],
-                      onPressed: null,
+                      isSelected: const [true, false],
+                      onPressed: (i) {},
                       borderRadius: BorderRadius.circular(4),
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.all(8),
-                          width: context.percentWidth(0.43),
-                          child: const Row(
+                      color: ColorsApp.mediumText,
+                      selectedColor: ColorsApp.lightText,
+                      fillColor: ColorsApp.primary,
+                      textStyle: TextStyles.textSemiBold.copyWith(
+                        color: ColorsApp.lightText,
+                      ),
+                      children: const [
+                        Padding(
+                          padding:
+                              EdgeInsets.symmetric(horizontal: 15, vertical: 0),
+                          child: Row(
                             children: [
                               Icon(Icons.energy_savings_leaf_outlined),
                               SizedBox(width: 5),
-                              Text('Sensor de Energia'),
+                              Text(
+                                'Sensor de Energia',
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 15),
+                          child: Row(
+                            children: [
+                              Icon(Icons.info_outline_rounded),
+                              SizedBox(width: 5),
+                              Text(
+                                'Crítico',
+                              ),
                             ],
                           ),
                         ),
                       ],
                     ),
                   ],
-                )
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                TreeView(indent: 20, nodes: [
+                  TreeNode(
+                    content: const Text("root1"),
+                  ),
+                  TreeNode(
+                    content: const Text("root2"),
+                    children: [
+                      TreeNode(
+                        content: const Text("child21"),
+                      ),
+                      TreeNode(
+                        content: const Text("child22"),
+                      ),
+                      TreeNode(
+                        content: const Text("root23"),
+                        children: [
+                          TreeNode(
+                            content: const Text("child231"),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ]),
               ],
             ),
           ),
